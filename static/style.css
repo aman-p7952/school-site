@@ -1,0 +1,76 @@
+.container{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: rgb(138, 143, 241);
+ }
+ .centered   {
+    position:absolute;
+    top:50%;  
+    padding: 10%;
+    /* transform: translate(-50%, -50%); */
+ }
+
+ .academics-content{
+    width :25%;
+
+  }
+  .btn-pre {
+    color:rgb(214, 214, 215);
+    /* background-color:aqua; */
+    display: block;
+    text-decoration: none;
+  }
+  .btn-pre:hover{
+    color:white;
+  }
+
+
+ #scroll-container {
+    border: 3px solid black;
+    border-radius: 5px;
+    height: 300px;
+    overflow: hidden;
+    color: rgb(189, 29, 29);
+  }
+  
+  #scroll-text {
+    height: 100%;
+    text-align: center;
+    color:rgb(96, 90, 150);
+    
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
+  
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateY(100%); }
+    to { -moz-transform: translateY(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateY(100%); }
+    to { -webkit-transform: translateY(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+    }
+    to {
+      -moz-transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  }
+

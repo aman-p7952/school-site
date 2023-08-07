@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="row bg-info-subtle">
+    <div class=" col-md-2 px-2 bg-primary" style="width: 15%;">
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <button  class=" btn btn-toggle align-items-center  "> Home</button>
+          </li>
+        </ul>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs I</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs II</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs III</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs IV</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs V</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs VI</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs VII</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs VIII</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs IX</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs X</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs XI</a>
+        <a href="{%url 'class1'%}" class=" px-3 btn-pre col-md-12">Classs XII</a>
+      </div>
+
+    <div class="col-md-10">
+      {%block academics%}
+
+      {%endblock academics%}
+    </div>
+</div>
+{% endblock content%}

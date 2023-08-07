@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="bg-info-subtle">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{%static "edu.jpg"%}" class="d-block w-100" alt="...">
+        </div>
+        {% comment %} <div class="carousel-item">
+            <img src="{%static "download.png" %} " class="d-block w-100" alt="img1">
+        </div> {% endcomment %}
+        <div class="carousel-item">
+            <img src="{% static 'edu1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {% comment %} <div class="w-100 h-25  ">
+    <img src={%static "download.png"%} alt="school" style = "width:100%">
+
+    <div class="centered">
+        <h4>{% lorem 1 b random %}</h4>
+    </div>
+    </div> {% endcomment %}
+    <div class ="row">
+        {% comment %} <div class="col overflow-scroll rounded m-5" id="scroll-container" >
+            <h1>HI</h1>
+            <p>{% lorem 2 b random %}</p>
+        </div> {% endcomment %}
+        <div class="col card rounded m-5" style="width: 12;">
+            <img src="{%static 'image.jpeg'%}" class="card-img-top" alt="..." height="auto", width = "100%" style="object-fit:cover">
+            <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="{%url "about"%}" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="col rounded m-5 " id="scroll-container" style="height:auto;background-image:linear-gradient(yellow,skyblue)">
+            <div id="scroll-text">{% lorem 2 b random %}</div>
+
+        </div>
+
+    </div>
+
+    <div class="p-5 mb-4 rounded-3" style="background-image: linear-gradient(to right, red , skyblue)">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Adimission Open</h1>
+          <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+          <button class="btn btn-primary btn-lg" type="button">Click Here</button>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}
+
+
+
