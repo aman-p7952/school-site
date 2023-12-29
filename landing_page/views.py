@@ -116,4 +116,8 @@ def logout1(request):
     context = {"is_authenticated":request.user.is_authenticated}
     if request.user.is_authenticated:
         context["email"]=request.user.email
-    return render(request,"home.html")
+    return render(request,"home.html",context)
+
+def profile(request):
+    context = {"is_authenticated":request.user.is_authenticated}
+    return render(request,"profile.html",context)
