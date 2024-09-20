@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing_page',
+    'fee',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'schools.urls'
-AUTHENTICATION_BACKENDS = ['landing_page.backends.EmailBackend']
+# AUTHENTICATION_BACKENDS = ['landing_page.backends.EmailBackend']
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
@@ -130,4 +131,9 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "landing_page.Login"
+AUTH_USER_MODEL = "landing_page.CustomUser"
+
+AUTHENTICATION_BACKENDS = [
+    'landing_page.backends.EmailBackend',
+    "django.contrib.auth.backends.ModelBackend", 
+]
